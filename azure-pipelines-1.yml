@@ -1,8 +1,8 @@
 trigger: none 
 
-pool: Agentpat
+pool: default
 
-name: agentnew
+name: Agentpat
 
 steps: 
 - task: TerraformInstaller@1
