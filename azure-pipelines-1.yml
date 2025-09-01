@@ -12,6 +12,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
+    backendServiceArm: 'azurenewconnection'
     backendAzureRmResourceGroupName: 'mriidulsrg'
     backendAzureRmStorageAccountName: 'mriidulstorage'
     backendAzureRmContainerName: 'mriidul-container-123'
