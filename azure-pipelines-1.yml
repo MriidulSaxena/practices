@@ -24,3 +24,9 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'azurenewconnection'
+- task: TerraformTask@5
+  displayName: terraform apply
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    commandOptions: '-auto-approve'
