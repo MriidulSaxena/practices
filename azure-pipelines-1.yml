@@ -9,23 +9,14 @@ steps:
   inputs:
     terraformVersion: 'latest'
 - task: TerraformTask@5
-  displayName: "terraform init"
   inputs:
     provider: 'azurerm'
     command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)C:\Code\INFRAAUTOMATION\Modules\azurerm_resource_group'
+    backendAzureRmUseEntraIdForAuthentication: false
+    backendAzureRmUseIdTokenGeneration: true
     backendServiceArm: 'azurenewconnection'
     backendAzureRmResourceGroupName: 'mriidulsrg'
     backendAzureRmStorageAccountName: 'mriidulstorage'
     backendAzureRmContainerName: 'mriidul-container-123'
-    backendAzureRmKey: 'appkey'
-- task: TerraformTask@5
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    environmentServiceNameAzureRM: 'azurenewconnection'
-- task: TerraformTask@5
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    commandOptions: '-auto-approve'
-    environmentServiceNameAzureRM: 'azurenewconnection'
+    backendAzureRmKey: 'appkey.tfstate'
