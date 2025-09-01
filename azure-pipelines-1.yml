@@ -18,3 +18,14 @@ steps:
     backendAzureRmStorageAccountName: 'mriidulstorage'
     backendAzureRmContainerName: 'mriidul-container-123'
     backendAzureRmKey: 'appkey'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'azurenewconnection'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    commandOptions: '-auto-approve'
+    environmentServiceNameAzureRM: 'azurenewconnection'
