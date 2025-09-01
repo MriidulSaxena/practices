@@ -12,9 +12,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)C:\Code\INFRAAUTOMATION\Modules\azurerm_resource_group'
-    backendAzureRmUseEntraIdForAuthentication: false
-    backendAzureRmUseIdTokenGeneration: true
     backendServiceArm: 'azurenewconnection'
     backendAzureRmResourceGroupName: 'mriidulsrg'
     backendAzureRmStorageAccountName: 'mriidulstorage'
