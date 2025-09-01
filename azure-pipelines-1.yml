@@ -30,3 +30,4 @@ steps:
     provider: 'azurerm'
     command: 'apply'
     commandOptions: '-auto-approve'
+    environmentServiceNameAzureRM: 'azurenewconnection'
