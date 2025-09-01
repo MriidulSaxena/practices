@@ -18,3 +18,9 @@ steps:
     backendAzureRmStorageAccountName: 'mriidulstorage'
     backendAzureRmContainerName: 'mriidul-container-123'
     backendAzureRmKey: 'appkey.tfstate'
+- task: TerraformTask@5
+  displayName: terraform plan
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'azurenewconnection'
